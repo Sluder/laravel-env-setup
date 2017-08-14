@@ -6,6 +6,7 @@
 
 # ----- SETUP -----
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+$wsh = New-Object -ComObject WScript.Shell
 Write-Host "`n`n`n`n`n`n"
 Write-Host " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 Write-Host "|`t Laravel 5.4 Installation `t|"
@@ -40,15 +41,16 @@ Remove-Item -path $PSScriptRoot\Git-Install.exe
 Write-Host "`nCreating Development directorys"
 cd $env:USERPROFILE
 
-# Get user email for SSH 
+# Set up Git SSH
 $email = Read-Host -Prompt 'Enter Omnispear email: '
-C:\"Program Files (x86)"\Git\git-bash.exe 
+$wsh.SendKeys('{ENTER}')
+$wsh.SendKeys('{ENTER}')
+$wsh.SendKeys('{ENTER}')
+C:\"Program Files"\Git\bin\sh.exe --login -i -c "ssh-keygen -t rsa -C $email" 
 
-#--ssh-keygen -t rsa -C $email 
-pause
-
-mkdir Development
-cd Development
+<#
+mkdir Development2
+cd Development2
 mkdir Projects
 
 Write-Host "`nSetting up Homestead"
@@ -60,14 +62,14 @@ Write-Host "`nInializing Homestead`n"
 ./init.bat
 
 # Send keys to select VirtualBox
-$wsh = New-Object -ComObject WScript.Shell
 $wsh.SendKeys('2')
 $wsh.SendKeys('{ENTER}')
 
 vagrant box add laravel/homestead 
 
 vagrant up
-vagrant ssh
+vagrant ssh  #>
 
 
 # C:\Program Files\Oracle\VirtualBox\drivers\network install both .inf
+#cmd /c pause | out-null
