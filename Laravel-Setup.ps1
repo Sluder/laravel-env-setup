@@ -6,6 +6,7 @@
 # Pre-setup 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $wsh = New-Object -ComObject WScript.Shell
+
 Write-Host " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 Write-Host "|`t Laravel 5.4 Installation `t|"
 Write-Host " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`n"
@@ -15,6 +16,7 @@ Write-Host " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`n"
 Write-Host "Downloading VirtualBox v5.1.22 ..."
 Invoke-WebRequest http://download.virtualbox.org/virtualbox/5.1.22/VirtualBox-5.1.22-115126-Win.exe -OutFile $PSScriptRoot\VirtualBox-Install.exe
 Start-Process -FilePath "$PSScriptRoot\VirtualBox-Install.exe" -wait
+
 Write-Host "`t- Finished"
 Remove-Item -path $PSScriptRoot\VirtualBox-Install.exe
 
@@ -23,6 +25,7 @@ Remove-Item -path $PSScriptRoot\VirtualBox-Install.exe
 Write-Host "Downloading Vagrant v1.9.5 ..."
 Invoke-WebRequest https://releases.hashicorp.com/vagrant/1.9.5/vagrant_1.9.5.msi -OutFile $PSScriptRoot\Vagrant-Install.msi
 Start-Process -FilePath "$PSScriptRoot\Vagrant-Install.msi" -wait
+
 Write-Host "`t- Finished"
 Remove-Item -path $PSScriptRoot\Vagrant-Install.msi
 
@@ -31,28 +34,32 @@ Remove-Item -path $PSScriptRoot\Vagrant-Install.msi
 Write-Host "Downloading Git Shell v2.12.0 ..."
 Invoke-WebRequest https://github.com/git-for-windows/git/releases/download/v2.13.0.windows.1/Git-2.13.0-32-bit.exe -OutFile $PSScriptRoot\Git-Install.exe
 Start-Process -FilePath "$PSScriptRoot\Git-Install.exe" -wait
+
 Write-Host "`t- Finished"
 Remove-Item -path $PSScriptRoot\Git-Install.exe
 
+
 # Set up development environment 
 $email = Read-Host -Prompt 'Enter Omnispear email: '
+
 $wsh.SendKeys('{ENTER}')
 $wsh.SendKeys('{ENTER}')
 $wsh.SendKeys('{ENTER}')
-C:\"Program Files"\Git\bin\sh.exe --login -i -c "ssh-keygen -t rsa -C $email" 
+C:\"Program Files (x86)"\Git\bin\sh.exe --login -i -c "ssh-keygen -t rsa -C $email" 
 
 Write-Host "`nCreating Development directorys"
 cd $env:USERPROFILE
 
-mkdir Projects
 mkdir Development
 cd Development
+mkdir Projects
+
 
 # Homestead (Hosting Server) setup
 Write-Host "`nSetting up Homestead"
-C:\"Program Files"\Git\bin\git clone https://github.com/laravel/homestead.git Homestead 
+C:\"Program Files (x86)"\Git\bin\git clone https://github.com/laravel/homestead.git Homestead 
 cd Homestead
-C:\"Program Files"\Git\bin\git checkout v5.3.2
+C:\"Program Files (x86)"\Git\bin\git checkout v5.3.2
 
 Write-Host "`nInializing Homestead`n"
 ./init.bat
@@ -65,8 +72,9 @@ vagrant box add laravel/homestead
 vagrant up
 vagrant ssh
 
-Write-Host "`nThe script has finished setting up"
+Write-Host "`n`nLaravel 5.4 installation is complete"
+md /c pause | out-null
 
 
-# Network drivers : C:\Program Files\Oracle\VirtualBox\drivers\network install both .inf
-# Pause script    : cmd /c pause | out-null
+# VirtualBox network drivers : C:\Program Files\Oracle\VirtualBox\drivers\network install both .inf
+# Pause script : cmd /c pause | out-null
