@@ -75,6 +75,5 @@ C:\HashiCorp\Vagrant\bin\vagrant ssh
 Write-Host "`n`nLaravel 5.4 installation is complete"
 cmd /c pause | out-null
 
-
 # VirtualBox network drivers : C:\Program Files\Oracle\VirtualBox\drivers\network install both .inf
 # Pause script : cmd /c pause | out-null
