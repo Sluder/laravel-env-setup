@@ -10,7 +10,7 @@ $wsh = New-Object -ComObject WScript.Shell
 Write-Host " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 Write-Host "|`t Laravel 5.4 Installation `t|"
 Write-Host " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`n"
-
+Write-Host "`n`n`n`n`n"
 
 # Download and install Virtualbox v5.1.22
 Write-Host "Downloading VirtualBox v5.1.22 ..."
@@ -39,7 +39,7 @@ Write-Host "`t- Finished"
 Remove-Item -path $PSScriptRoot\Git-Install.exe
 
 
-# Set up development environment 
+# Set up development folders 
 $email = Read-Host -Prompt 'Enter Omnispear email: '
 
 $wsh.SendKeys('{ENTER}')
@@ -55,7 +55,7 @@ cd Development
 mkdir Projects
 
 
-# Homestead (Hosting Server) setup
+# Homestead setup
 Write-Host "`nSetting up Homestead"
 C:\"Program Files (x86)"\Git\bin\git clone https://github.com/laravel/homestead.git Homestead 
 cd Homestead
@@ -67,13 +67,13 @@ Write-Host "`nInializing Homestead`n"
 $wsh.SendKeys('2')
 $wsh.SendKeys('{ENTER}')
 
-vagrant box add laravel/homestead 
+C:\HashiCorp\Vagrant\bin\vagrant box add laravel/homestead 
 
-vagrant up
-vagrant ssh
+C:\HashiCorp\Vagrant\bin\vagrant up
+C:\HashiCorp\Vagrant\bin\vagrant ssh
 
 Write-Host "`n`nLaravel 5.4 installation is complete"
-md /c pause | out-null
+cmd /c pause | out-null
 
 
 # VirtualBox network drivers : C:\Program Files\Oracle\VirtualBox\drivers\network install both .inf
