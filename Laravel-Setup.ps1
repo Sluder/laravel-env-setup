@@ -40,7 +40,7 @@ Remove-Item -path $PSScriptRoot\Git-Install.exe
 
 
 # Set up development folders 
-$email = Read-Host -Prompt 'Enter Omnispear email: '
+$email = Read-Host -Prompt 'Enter email: '
 
 $wsh.SendKeys('{ENTER}')
 $wsh.SendKeys('{ENTER}')
@@ -72,7 +72,7 @@ C:\HashiCorp\Vagrant\bin\vagrant box add laravel/homestead
 C:\HashiCorp\Vagrant\bin\vagrant up
 C:\HashiCorp\Vagrant\bin\vagrant ssh
 
-Write-Host "`n`nLaravel 5.4 installation is complete"
+Write-Host "`n`nLaravel 5.5 installation is complete"
 cmd /c pause | out-null
 
 # VirtualBox network drivers : C:\Program Files\Oracle\VirtualBox\drivers\network install both .inf
