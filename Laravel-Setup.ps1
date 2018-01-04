@@ -1,6 +1,6 @@
 
 # --------------------------------------------
-#          Laravel 5.5 Windows Setup
+#          Laravel Windows Environment Setup
 # --------------------------------------------
 
 # Pre-setup 
@@ -8,7 +8,7 @@
 $wsh = New-Object -ComObject WScript.Shell
 
 Write-Host " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-Write-Host "|`t Laravel 5.4 Installation `t|"
+Write-Host "|`t  Laravel Installation  `t|"
 Write-Host " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`n"
 Write-Host "`n`n`n`n`n"
 
@@ -72,7 +72,7 @@ C:\HashiCorp\Vagrant\bin\vagrant box add laravel/homestead
 C:\HashiCorp\Vagrant\bin\vagrant up
 C:\HashiCorp\Vagrant\bin\vagrant ssh
 
-Write-Host "`n`nLaravel 5.5 installation is complete"
+Write-Host "`n`nLaravel environment setup is complete"
 cmd /c pause | out-null
 
 # VirtualBox network drivers : C:\Program Files\Oracle\VirtualBox\drivers\network install both .inf
