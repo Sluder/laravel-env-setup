@@ -1,5 +1,5 @@
 
-# Laravel Development Environment Setup Script
+# Windows Laravel Development Environment
 1. Downloads all required programs and installs
 2. Creates development folders under user directory
 3. Sets up Homestead and SSH keys for GIT
