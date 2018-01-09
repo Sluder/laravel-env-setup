@@ -1,6 +1,6 @@
 
 # --------------------------------------------
-#          Laravel Windows Environment Setup
+#  Laravel Windows Environment Setup
 # --------------------------------------------
 
 # Pre-setup 
