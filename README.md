@@ -5,3 +5,5 @@
 3. Sets up Homestead and SSH keys for GIT
 
 To run, right click `Laravel-Setup.ps1` and select "Run with Powershell" under admin privileges
+
+NOTES: Do not reboot while the script is running
