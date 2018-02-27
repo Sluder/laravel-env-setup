@@ -64,7 +64,7 @@ C:\"Program Files (x86)"\Git\bin\git checkout v5.3.2
 Write-Host "`nInializing Homestead`n"
 ./init.bat
 
-$wsh.SendKeys('2')
+$wsh.SendKeys('3')
 $wsh.SendKeys('{ENTER}')
 
 C:\HashiCorp\Vagrant\bin\vagrant box add laravel/homestead 
