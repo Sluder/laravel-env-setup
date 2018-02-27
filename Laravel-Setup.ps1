@@ -14,7 +14,7 @@ Write-Host "`n`n`n`n`n"
 
 # Download and install Virtualbox v5.1.22
 Write-Host "Downloading VirtualBox v5.1.22 ..."
-Invoke-WebRequest http://download.virtualbox.org/virtualbox/5.1.22/VirtualBox-5.1.22-115126-Win.exe -OutFile $PSScriptRoot\VirtualBox-Install.exe
+Invoke-WebRequest http://download.virtualbox.org/virtualbox/5.2.8/VirtualBox-5.2.8-121009-Win.exe -OutFile $PSScriptRoot\VirtualBox-Install.exe
 Start-Process -FilePath "$PSScriptRoot\VirtualBox-Install.exe" -wait
 
 Write-Host "`t- Finished"
@@ -23,7 +23,7 @@ Remove-Item -path $PSScriptRoot\VirtualBox-Install.exe
 
 # Download and install Vagrant v1.9.5
 Write-Host "Downloading Vagrant v1.9.5 ..."
-Invoke-WebRequest https://releases.hashicorp.com/vagrant/1.9.5/vagrant_1.9.5.msi -OutFile $PSScriptRoot\Vagrant-Install.msi
+Invoke-WebRequest https://releases.hashicorp.com/vagrant/2.0.2/vagrant_2.0.2_x86_64.msi -OutFile $PSScriptRoot\Vagrant-Install.msi
 Start-Process -FilePath "$PSScriptRoot\Vagrant-Install.msi" -wait
 
 Write-Host "`t- Finished"
