@@ -70,7 +70,7 @@ $wsh.SendKeys('{ENTER}')
 C:\HashiCorp\Vagrant\bin\vagrant box add laravel/homestead 
 
 C:\HashiCorp\Vagrant\bin\vagrant up
-C:\HashiCorp\Vagrant\bin\vagrant ssh
+C:\HashiCorp\Vagrant\bin\vagrant halt
 
 Write-Host "`n`nLaravel environment setup is complete"
 cmd /c pause | out-null
