@@ -1,5 +1,5 @@
 # Windows Laravel Development Environment
-Solved the issue of running into multiple issues setting up a developer with a Laravel development setup
+Solved the problem of running into multiple issues setting up a developer with a Laravel development setup. Mainly caused by incompatible packages trying to work with eachother. 
 
 ### What it does : 
 1. Downloads all required programs and installs
