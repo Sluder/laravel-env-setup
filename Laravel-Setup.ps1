@@ -10,7 +10,6 @@ $wsh = New-Object -ComObject WScript.Shell
 Write-Host " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 Write-Host "|`t  Laravel Installation  `t|"
 Write-Host " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`n"
-Write-Host "`n"
 
 # Download and install Virtualbox v5.2.8
 Write-Host "Downloading VirtualBox v5.2.8 ..."
