@@ -14,4 +14,8 @@ Solved the problem of running into multiple issues setting up a developer with a
 
 ### Running :
 Right click `Laravel-Setup.ps1` and select `Run with Powershell` (Might need admin privileges). 
-Do not reboot while the script is running!
+
+
+### Notes : 
+	* If prompted "The execution policy helps protect you from scripts that you do not trust", select choice `A` for "Yes to All". 
+	* Do not reboot while the script is running!
