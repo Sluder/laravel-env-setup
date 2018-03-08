@@ -12,6 +12,6 @@ Solved the issue of running into multiple issues setting up a developer with a L
 3. Sets up Homestead and SSH keys for GIT
 	* Prompts for email, might want to use one attached to your github.com
 
-### Running
+### Running :
 Right click `Laravel-Setup.ps1` and select `Run with Powershell` (Might need admin privileges). 
 Do not reboot while the script is running!
