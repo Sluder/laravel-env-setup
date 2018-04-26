@@ -2,7 +2,7 @@
 Solved the problem of running into multiple issues setting up a developer with a Laravel development setup. Mainly caused by incompatible packages trying to work with eachother. 
 
 ### What it does : 
-1. Downloads all required programs and installs
+1. Downloads & sets up all required programs 
 	* VirtualBox `v5.2.8`
 	* Vagrant `v2.0.2`
 	* Git `v2.12`
