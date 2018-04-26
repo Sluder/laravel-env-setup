@@ -6,6 +6,7 @@ Solved the problem of running into multiple issues setting up a developer with a
 	* VirtualBox `v5.2.8`
 	* Vagrant `v2.0.2`
 	* Git `v2.12`
+	* Homestead `Latest`
 2. Creates development folders under under `~/Development` for convenience
 	* `~/Development/Homestead` : Local Homestead server container
 	* `~/Development/Projects` : Laravel projects container
