@@ -10,7 +10,7 @@ Solved the problem of running into multiple issues setting up a developer with a
 2. Creates development folders under under `~/Development` for convenience
 	* `~/Development/Homestead` : Local Homestead server container
 	* `~/Development/Projects` : Laravel projects container
-3. Sets up Homestead and SSH keys for GIT
+3. Sets up Homestead and SSH keys for Git
 	* Prompts for email, might want to use one attached to your github.com
 
 ### Running :
